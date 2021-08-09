@@ -10,11 +10,35 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd">
 	
-	<bean id="salary" name="band_1_salary" class="com.empappxml.employee.Salary">
+	<!-- <bean id="gp_1" class="com.empappxml.employee.DecimalFormat">
+		<property name="grassPay" value="50000.00"></property>
+	</bean> -->
+	
+	<bean id="salary_1" name="band_1_salary" class="com.empappxml.employee.Salary">
+		<property name="grassPay" value="50000.00"></property>
+		<property name="pf" value="3500.00"></property>
+	</bean>
+	
+	<bean id="salary_2" name="band_2_salary" class="com.empappxml.employee.Salary">
+		<property name="grassPay" value="60000.00"></property>
+		<property name="pf" value="3600.00"></property>
+	</bean>
+	
+	<bean id="salary_3" name="band_3_salary" class="com.empappxml.employee.Salary">
+		<property name="grassPay" value="64000.00"></property>
+		<property name="pf" value="4000.00"></property>
 	</bean>
 		
-	<bean id="employee" class="com.empappxml.employee.Employee">
+	<bean id="emp_1" class="com.empappxml.employee.Employee">
+		<property name="id" value="1"></property>
+		<property name="name" value="Sethu"></property>
+		<property name="email" value="sethu@mail.com"></property>
+		<property name="corpId" value="123"></property>
+		<property name="band" value="B1"></property>
+		<property name="phoneNumber" value="9566841129"></property>
+		<property name="salary">
+			<ref bean="salary_1"/>
+		</property>
 	</bean>
-
 
 </beans>
