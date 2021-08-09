@@ -1,11 +1,11 @@
 package com.empappxml.employee_configuration;
 
 import java.util.Iterator;
-
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.empappxml.employee.Employee;
 import com.empappxml.employee.Salary;
+import com.empappxml.exception.EmployeeNotFoundException;
 import com.empappxml.service.EmployeeServiceImp;
 
 public class EmployeeConfiguration {
@@ -45,6 +45,16 @@ public class EmployeeConfiguration {
 			System.out.println(employee);
 		}
 		System.out.println("<------- End of Find All -------->");
+		
+		System.out.println("<------- Begin of Find By Id ------>");
+		try {
+			Employee empById = serviceImp.findById(3);
+			System.out.println(empById);
+		} catch (EmployeeNotFoundException e) {
+			System.err.println(e.getMessage());
+		}
+		System.out.println("<------- End of Find By Id -------->");
+		
 		empConfig.close();
 	}
 	
