@@ -4,7 +4,7 @@ public class Employee {
 	private int id;
 	private String name;
 	private String email;
-	private short corpId;
+	private String corpId;
 	private String band;
 	private long phoneNumber;
 	private Salary salary;
@@ -13,7 +13,7 @@ public class Employee {
 		System.out.println("Printing the default constructor from Employee");
 	}
 
-	public Employee(int id, String name, String email, short corpId, String band, long phoneNumber, Salary salary) {
+	public Employee(int id, String name, String email, String corpId, String band, long phoneNumber, Salary salary) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -48,11 +48,11 @@ public class Employee {
 		this.email = email;
 	}
 
-	public short getCorpId() {
+	public String getCorpId() {
 		return corpId;
 	}
 
-	public void setCorpId(short corpId) {
+	public void setCorpId(String corpId) {
 		this.corpId = corpId;
 	}
 
@@ -90,7 +90,7 @@ public class Employee {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + corpId;
+		result = prime * result + ((corpId == null) ? 0 : corpId.hashCode());
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + id;
 		result = prime * result + (int) (phoneNumber ^ (phoneNumber >>> 32));
@@ -106,7 +106,10 @@ public class Employee {
 		if (getClass() != obj.getClass())
 			return false;
 		Employee other = (Employee) obj;
-		if (corpId != other.corpId)
+		if (corpId != null) {
+			if(other.corpId != null)
+				return false;
+		} else if (!corpId.equals(other.corpId))
 			return false;
 		if (email == null) {
 			if (other.email != null)

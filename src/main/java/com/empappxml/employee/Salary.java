@@ -1,8 +1,12 @@
 package com.empappxml.employee;
 
+import java.text.DecimalFormat;
+import java.util.regex.Pattern;
+
 public class Salary {
 	
 	private double grassPay;
+	private double pf;
 
 	public Salary() {
 		System.out.println("Printing the default constructor from Salary");
@@ -18,7 +22,23 @@ public class Salary {
 
 	@Override
 	public String toString() {
-		return "Salary [grassPay=" + grassPay + "]";
+		return "Salary [grassPay=" + convertSalary("###.##", grassPay) + ", " + pf + "]";
+	}
+	
+	public double getPf() {
+		return pf;
+	}
+
+	public void setPf(double pf) {
+		this.pf = pf;
+	}
+	
+	public static String convertSalary(String patten, double grassPay) {
+		System.out.println(grassPay);
+		DecimalFormat df = new DecimalFormat(patten);
+		String op = df.format(grassPay);
+		System.out.println(op);
+		return op;
 	}
 
 	@Override
