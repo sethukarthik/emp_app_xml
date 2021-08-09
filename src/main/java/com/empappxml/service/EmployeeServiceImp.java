@@ -8,6 +8,10 @@ import com.empappxml.exception.EmployeeNotFoundException;
 public class EmployeeServiceImp implements EmployeeService {
 	private static Set<Employee> employeeSet;
 
+	{
+		employeeSet = new LinkedHashSet<>();
+	}
+
 	public Employee findById(int id) throws EmployeeNotFoundException {
 		return null;
 	}
@@ -17,7 +21,6 @@ public class EmployeeServiceImp implements EmployeeService {
 	}
 
 	public void newEmployee(Employee employee) {
-		employeeSet = new LinkedHashSet<>();
 		try {			
 			employeeSet.add(employee);
 		} catch (Exception e) {

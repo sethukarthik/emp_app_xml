@@ -33,12 +33,33 @@
 		<property name="id" value="1"></property>
 		<property name="name" value="Sethu"></property>
 		<property name="email" value="sethu@mail.com"></property>
-		<property name="corpId" value="123"></property>
+		<property name="corpId" value="MSNK123"></property>
 		<property name="band" value="B1"></property>
 		<property name="phoneNumber" value="9566841129"></property>
 		<property name="salary">
 			<ref bean="salary_1"/>
 		</property>
 	</bean>
-
+	
+	<bean id="emp_2" class="com.empappxml.employee.Employee">
+		<property name="id" value="2"></property>
+		<property name="name" value="Nithya"></property>
+		<property name="email" value="nithya@mail.com"></property>
+		<property name="corpId" value="NS123"></property>
+		<property name="band" value="B2"></property>
+		<property name="phoneNumber" value="6382658850"></property>
+		<property name="salary">
+			<ref bean="salary_2"/>
+		</property>
+	</bean>
+	
+	<bean id="salary_4" name="setSalaryConfig" class="com.empappxml.employee.Salary"></bean>
+	<bean id="emp_3" name="setEmpInConfig" class="com.empappxml.employee.Employee">
+		<property name="salary">
+			<ref bean="salary_4" />
+		</property>
+	</bean>
+	
+	<bean id="service" class="com.empappxml.service.EmployeeServiceImp"></bean>
+	
 </beans>

@@ -1,7 +1,6 @@
 package com.empappxml.employee;
 
 import com.empappxml.service.EmployeeServiceImp;
-import java.util.Set;
 
 public class Employee {
 	private int id;
@@ -82,17 +81,6 @@ public class Employee {
 
 	public void setSalary(Salary salary) {
 		this.salary = salary;
-	}
-
-	public void createEmp(Employee emp) {
-		service = new EmployeeServiceImp();
-		service.newEmployee(emp);
-	}
-	
-	public void findAllEmp() {
-		service = new EmployeeServiceImp();
-		System.out.println(service.findAll());
-		
 	}
 	
 	@Override
