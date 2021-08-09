@@ -1,5 +1,6 @@
 package com.empappxml.service;
 
+import java.util.LinkedHashSet;
 import java.util.Set;
 import com.empappxml.employee.Employee;
 import com.empappxml.exception.EmployeeNotFoundException;
@@ -12,11 +13,16 @@ public class EmployeeServiceImp implements EmployeeService {
 	}
 
 	public Set<Employee> findAll() {
-		return null;
+		return employeeSet;
 	}
 
 	public void newEmployee(Employee employee) {
-		employeeSet.add(employee);
+		employeeSet = new LinkedHashSet<>();
+		try {			
+			employeeSet.add(employee);
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
 	}
 
 	public void updateEmployee(Employee employee) throws EmployeeNotFoundException {		

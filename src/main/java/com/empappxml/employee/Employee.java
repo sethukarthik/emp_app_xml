@@ -1,5 +1,8 @@
 package com.empappxml.employee;
 
+import com.empappxml.service.EmployeeServiceImp;
+import java.util.Set;
+
 public class Employee {
 	private int id;
 	private String name;
@@ -8,6 +11,7 @@ public class Employee {
 	private String band;
 	private long phoneNumber;
 	private Salary salary;
+	private EmployeeServiceImp service;
 	
 	public Employee() {
 		System.out.println("Printing the default constructor from Employee");
@@ -80,6 +84,17 @@ public class Employee {
 		this.salary = salary;
 	}
 
+	public void createEmp(Employee emp) {
+		service = new EmployeeServiceImp();
+		service.newEmployee(emp);
+	}
+	
+	public void findAllEmp() {
+		service = new EmployeeServiceImp();
+		System.out.println(service.findAll());
+		
+	}
+	
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", email=" + email + ", corpId=" + corpId + ", band=" + band

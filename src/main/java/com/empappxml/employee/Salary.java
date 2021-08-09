@@ -34,10 +34,8 @@ public class Salary {
 	}
 	
 	public static String convertSalary(String patten, double grassPay) {
-		System.out.println(grassPay);
 		DecimalFormat df = new DecimalFormat(patten);
 		String op = df.format(grassPay);
-		System.out.println(op);
 		return op;
 	}
 

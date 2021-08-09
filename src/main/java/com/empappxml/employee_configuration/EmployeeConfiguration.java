@@ -10,6 +10,8 @@ public class EmployeeConfiguration {
 		ClassPathXmlApplicationContext empConfig = new ClassPathXmlApplicationContext("Employee.xml");
 		Employee emp = empConfig.getBean("emp_1", Employee.class);
 		System.out.println(emp);
+		emp.createEmp(emp);
+		emp.findAllEmp();
 		empConfig.close();
 	}
 	
