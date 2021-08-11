@@ -11,6 +11,12 @@ public class Salary {
 	public Salary() {
 	}
 
+	public Salary(double grassPay, double pf) {
+		super();
+		this.grassPay = grassPay;
+		this.pf = pf;
+	}
+
 	public double getGrassPay() {
 		return grassPay;
 	}
