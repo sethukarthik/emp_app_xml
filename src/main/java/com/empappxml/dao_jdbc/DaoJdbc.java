@@ -12,7 +12,7 @@ public interface DaoJdbc {
 	List<Employee> allEmpInfo();
 	
 	//find employee using corp id
-	List<Employee> findById(int id);
+	Employee findById(int id);
 	
 	//create a new employee
 	void save(Employee employee);

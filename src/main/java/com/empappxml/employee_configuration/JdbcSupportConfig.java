@@ -13,6 +13,8 @@ public class JdbcSupportConfig {
 			System.out.println(empInfo.findAll());
 			System.err.println("<--- Employee Info With Salary --->");
 			System.out.println(empInfo.allEmpInfo());
+			System.err.println("<--- Get Employee Info With Salary By CorpId --->");
+			System.out.println(empInfo.findById(1));
 			System.err.println("<--- ******* --->");
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
