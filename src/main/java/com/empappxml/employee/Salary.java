@@ -9,7 +9,6 @@ public class Salary {
 	private double pf;
 
 	public Salary() {
-		System.out.println("Printing the default constructor from Salary");
 	}
 
 	public double getGrassPay() {

@@ -8,6 +8,9 @@ public interface DaoJdbc {
 	//find all the emp from emp_info
 	List<Employee> findAll();
 	
+	//find all the emp from emp_info and salary
+	List<Employee> allEmpInfo();
+	
 	//find employee using corp id
 	List<Employee> findById(int id);
 	

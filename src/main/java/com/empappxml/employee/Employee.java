@@ -13,9 +13,17 @@ public class Employee {
 	private EmployeeServiceImp service;
 	
 	public Employee() {
-		System.out.println("Printing the default constructor from Employee");
 	}
 
+	public Employee(int id, String name, String email, String corpId, String band, long phoneNumber) {
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.corpId = corpId;
+		this.band = band;
+		this.phoneNumber = phoneNumber;
+	}
+	
 	public Employee(int id, String name, String email, String corpId, String band, long phoneNumber, Salary salary) {
 		super();
 		this.id = id;

@@ -10,6 +10,8 @@ public class DaoConfiguration {
 			ClassPathXmlApplicationContext daoBean = new ClassPathXmlApplicationContext("dao_jdbc.xml");
 			DaoJdbcImp daoC = daoBean.getBean(DaoJdbcImp.class);
 			System.out.println(daoC.totalEmpCount());
+			System.out.println(daoC.findAll());
+			System.out.println(daoC.allEmpInfo());
 			daoBean.close();
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
