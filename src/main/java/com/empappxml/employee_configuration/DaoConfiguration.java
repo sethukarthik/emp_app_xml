@@ -11,7 +11,7 @@ public class DaoConfiguration {
 			DaoJdbcImp daoC = daoBean.getBean(DaoJdbcImp.class);
 			System.out.println(daoC.totalEmpCount());
 			System.out.println(daoC.findAll());
-			System.out.println(daoC.allEmpInfo());
+			System.out.println(daoC);
 			daoBean.close();
 		} catch (Exception e) {
 			System.err.println(e.getMessage());

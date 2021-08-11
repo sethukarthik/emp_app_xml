@@ -25,5 +25,11 @@
 			<ref bean="jdbcTemp"/>
 		</property>
 	</bean>
+	
+	<bean id="empDao" class="com.empappxml.dao_jdbc.JdbcSupport">
+		<property name="dataSource">
+			<ref bean="dataSource"/>
+		</property>
+	</bean>
 
 </beans>
