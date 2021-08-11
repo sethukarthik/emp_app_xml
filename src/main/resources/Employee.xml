@@ -60,6 +60,10 @@
 		</property>
 	</bean>
 	
+	<!-- <bean id="salaryUpdate" name="updateEmp" class="com.empappxml.employee.Salary">
+		<constructor-arg ref="salary_2"/>
+	</bean> -->
+	
 	<bean id="service" class="com.empappxml.service.EmployeeServiceImp"></bean>
 	
 </beans>

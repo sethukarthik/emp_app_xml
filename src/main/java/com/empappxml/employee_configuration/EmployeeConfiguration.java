@@ -55,6 +55,19 @@ public class EmployeeConfiguration {
 		}
 		System.out.println("<------- End of Find By Id -------->");
 		
+		System.out.println("<------- Begin of udpate emp corp ID------>");
+		try {
+			serviceImp.updateEmployee(emp_3);
+			Iterator<Employee> allEmp = serviceImp.findAll().iterator();
+			while (empIt.hasNext()) {
+				Employee employee = (Employee) empIt.next();
+				System.out.println(employee);
+			}
+		} catch (EmployeeNotFoundException e) {
+			System.err.println(e.getMessage());
+		}
+		System.out.println("<------- End of udpate -------->");
+		
 		empConfig.close();
 	}
 	

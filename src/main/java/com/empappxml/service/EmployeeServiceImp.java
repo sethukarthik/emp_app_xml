@@ -10,7 +10,7 @@ public class EmployeeServiceImp implements EmployeeService {
 	private static Set<Employee> employeeSet;
 	private static Employee employee;
 
-	{
+	public EmployeeServiceImp() {
 		employeeSet = new LinkedHashSet<>();
 	}
 
@@ -37,7 +37,7 @@ public class EmployeeServiceImp implements EmployeeService {
 		}
 	}
 
-	public void updateEmployee(Employee employee) throws EmployeeNotFoundException {		
+	public void updateEmployee(Employee employee) throws EmployeeNotFoundException {
 	}
 
 	public void deleteEmployee(Employee employee) throws EmployeeNotFoundException {
